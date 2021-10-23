@@ -1,3 +1,4 @@
+import java.io.BufferedReader;
 import java.util.Scanner;
 
 /**
@@ -12,7 +13,9 @@ public class Main {
         System.out.println("Informe o endereço completo do arquivo (Exemplo: C:\\git\\teoria-dos-grafos-questao-3\\arquivos\\Arquivo_1.txt)");
         String path = scanner.nextLine();
 
-
+        BufferedReader bufferedReader = fileController.loadFile(path);
+        Graph graph = new Graph();
+        graph = graph.createGraphFromFile(bufferedReader);
     }
 
 }
