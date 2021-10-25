@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 import bfs.BFS;
@@ -26,18 +27,24 @@ public class Main {
         String v = scanner.nextLine();
         No no = grafo.obterNoApartirDoNome(v);
 
-        System.out.println("Resultado BFS:");
         BFS bfs = new BFS();
+        System.out.println("Início execução bfs: " + LocalDateTime.now());
         bfs.bfs(grafo, no);
-        System.out.println(bfs.ordemNosEncontrados.toString());
+        System.out.println("Fim execução bfs: " + LocalDateTime.now());
+        System.out.println("Resultado BFS:");
+//        System.out.println(bfs.ordemNosEncontrados.toString());
         String arquivo = gerenciadorArquivos.criaArquivo();
         gerenciadorArquivos.escreveArquivo(arquivo, "Resultado BFS:" + "\n" + bfs.ordemNosEncontrados.toString());
 
-        System.out.println("Resultado DFS:");
+        System.out.println("--------------------------------------------------------------");
         grafo.resetarNosVisitados();
+
         DFS dfs = new DFS();
+        System.out.println("Início execução dfs: " + LocalDateTime.now());
         dfs.dfs(grafo, no);
-        System.out.println(dfs.ordemNosEncontrados.toString());
+        System.out.println("Fim execução dfs: " + LocalDateTime.now());
+        System.out.println("Resultado DFS:");
+//        System.out.println(dfs.ordemNosEncontrados.toString());
         gerenciadorArquivos.escreveArquivo(arquivo, "\nResultado DFS:" + "\n" + dfs.ordemNosEncontrados.toString());
     }
 
