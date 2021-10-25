@@ -7,6 +7,9 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * @author Gabriel Kresin e Iago G. Tambosi
+ */
 public class Grafo {
 
     // Cada nó do mapa de adjacência possui uma lista de nós filhos

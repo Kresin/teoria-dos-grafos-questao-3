@@ -5,6 +5,9 @@ import java.util.LinkedList;
 import graph.Grafo;
 import graph.No;
 
+/**
+ * @author Gabriel Kresin e Iago G. Tambosi
+ */
 public class DFS {
 
     public StringBuilder ordemNosEncontrados = new StringBuilder();

@@ -1,5 +1,8 @@
 package graph;
 
+/**
+ * @author Gabriel Kresin e Iago G. Tambosi
+ */
 public class No {
 
     int n;
